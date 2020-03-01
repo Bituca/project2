@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Listagem com links</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <select name="Links" onchange="abrepg(value)">
+            
+            <option value="V23/verde.html">Verde</option>
+            <option value="V23/amarelo.html">Amarelo</option>
+            <option value="V23/Rosa.html">Rosa</option>
+            <option value="V23/Azul.html">Azul</option>
+
+        </select>
+
+    </body>
+    <script lang="javascript">
+        function abrepg(link){
+            window.location.href=(link)
+            //window.open(link);
+        }
+
+    </script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+    </body>
+    <script lang="javascript">
+
+        let jogador1=prompt("J1 digite um número:");
+        let jogador2=prompt("J2 digite um número:");
+        if(jogador1==jogador2){
+            alert("Empate");
+        }else{
+            let nsorteado=parseInt(Math.random()*2);
+            alert(nsorteado);
+
+            if(nsorteado === 0 && jogador1 < jogador2 || nsorteado === 1 && jogador1 > jogador2){
+                alert("Jogador 1 ganhou!");
+            }else{
+                alert("Jogador 2 ganhou!")
+            }
+        
+
+        
+        }
+
+    </script>
+</html>

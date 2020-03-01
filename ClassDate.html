@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>class date</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form name="frelogio">
+            <input type="text" name="rel">
+        </form>
+    </body>
+    <script>
+        let data = new Date();
+
+        let mes = new Array("Janeiro","Fevereiro","Março","Abril","Maior","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+        let dsemana = new Array("Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado");
+
+        document.write(dsemana[data.getDay()]+", "+ data.getDate()+" de "+ mes[data.getMonth()]+" de "+ data.getFullYear()); document.write("<br>");
+
+        
+        function movrelogio(){
+            let relogio = new Date();
+    
+            let hora = relogio.getHours();
+            let minuto = relogio.getMinutes();
+            let segundo = relogio.getSeconds();
+            
+            if(hora < 10){
+                hora = "0" + relogio.getHours();
+            }
+            if(minuto < 10){
+                minuto = "0" + relogio.getMinutes();
+            }
+            if(segundo < 10){
+                segundo = "0" + relogio.getSeconds();
+            }
+            
+            //document.write(hora+":"+minuto+":"+segundo);
+            let relogiotot = hora+":"+minuto+":"+segundo;
+            
+            document.frelogio.rel.value=relogiotot
+
+            setTimeout("movrelogio()","1000");
+        }movrelogio();
+        
+
+    </script>
+</html>
